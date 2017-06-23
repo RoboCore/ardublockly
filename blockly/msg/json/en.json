@@ -486,5 +486,31 @@
 	"NEW_INSTANCE": "New instance...",
 	"RENAME_INSTANCE": "Rename instance...",
 	"NEW_INSTANCE_TITLE": "New instance name:",
-	"RENAME_INSTANCE_TITLE": "Rename all '%1' instances to:"
+	"RENAME_INSTANCE_TITLE": "Rename all '%1' instances to:",
+
+	"ARD_MOTOR_SETUP": "Setup motor",
+	"ARD_MOTOR": "motor:",
+	"ARD_MOTOR_DEFAULT_NAME": "MyMotor",
+	"ARD_MOTOR_SPEED_PIN": "speed pin:",
+	"ARD_MOTOR_DIRECTION_PIN": "direction pin:",
+	"ARD_MOTOR_SETUP_TIP": "Configures a motor pinout.",
+	"ARD_MOTOR_SET": "set motor:",
+	"ARD_MOTOR_SET_SPEED": "speed(%):",
+	"ARD_MOTOR_SET_DIRECTION": "direction:",
+	"ARD_MOTOR_DIRECTION_FORWARD": "FORWARD",
+	"ARD_MOTOR_DIRECTION_BACKWARD": "BACKWARD",
+	"ARD_MOTOR_SET_TIP": "Set motor direction(FORWARD or BACKWARD) and  speed(0 - 100%).",
+	"ARD_MOTOR_SET_SPEED_TIP": "Set motor speed(0 - 100%).",
+	"ARD_MOTOR_SET_DIRECTION_TIP": "Set motor direction(FORWARD or BACKWARD).",
+	"ARD_MOTOR_COMPONENT": "motor",
+
+	"ARD_ULTRASONIC_SETUP": "Setup ultrasonic",
+	"ARD_ULTRASONIC": "ultrasonic sensor:",
+	"ARD_ULTRASONIC_DEFAULT_NAME": "MyUltrasonic",
+	"ARD_ULTRASONIC_TRIGGER_PIN": "trigger pin:",
+	"ARD_ULTRASONIC_ECHO_PIN": "echo pin:",
+	"ARD_ULTRASONIC_SETUP_TIP": "Configures ultrasonic sensor pinout.",
+	"ARD_ULTRASONIC_READ": "read distance",
+	"ARD_ULTRASONIC_READ_TIP": "Read distance read by ultrasonic sensor.",
+	"ARD_ULTRASONIC_COMPONENT": "ultrasonic"
 }

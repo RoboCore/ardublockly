@@ -232,5 +232,29 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="spi_transfer_return"></block>' +
 '  </category>' +
 '  <category id="catRoboCore" name="RoboCore">' +
+'    <block type="motor_config">' +
+'      <field name="MOTOR_DIRECTION_PIN">7</field>' +
+'      <field name="MOTOR_SPEED_PIN">5</field>' +
+'    </block>' +
+'    <block type="motor_set">' +
+'      <value name="MOTOR_SPEED">' +
+'        <block type="math_number">' +
+'          <field name="NUM">100</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="motor_set_direction"></block>' +
+'    <block type="motor_set_speed">' +
+'      <value name="MOTOR_SPEED">' +
+'        <block type="math_number">' +
+'          <field name="NUM">100</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="ultrasonic_config">' +
+'      <field name="ULTRASONIC_TRIGGER_PIN">12</field>' +
+'      <field name="ULTRASONIC_ECHO_PIN">13</field>' +
+'    </block>' +
+'    <block type="ultrasonic_read"></block>' +
 '  </category>' +
 '</xml>';
