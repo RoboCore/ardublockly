@@ -231,4 +231,6 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="spi_transfer"></block>' +
 '    <block type="spi_transfer_return"></block>' +
 '  </category>' +
+'  <category id="catRoboCore" name="RoboCore">' +
+'  </category>' +
 '</xml>';
