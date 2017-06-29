@@ -9,6 +9,11 @@ The ServerCompilerSettings is a singleton class maintained in memory, and
 the the Ardublockly and Arduino IDE settings into a file.
 On first invocation of the singleton it reads the settings from the file.
 """
+
+# Changes made by RoboCore
+# 28/06/2017 - by @marcelofariaz:
+#  - Edit __arduino_types to add names of some RoboCore boards;
+
 from __future__ import unicode_literals, absolute_import, print_function
 import os
 import re
@@ -48,7 +53,7 @@ class ServerCompilerSettings(object):
     # TODO: This content will be moved from here and integrated completely
     #       into 'blockly\generators\arduino\boards.js', which should then
     #       send the selected flag to be saved as a single value
-    __arduino_types = {'Arduino Uno/BlackBoard': 'arduino:avr:uno',
+    __arduino_types = {'Arduino Uno/BlackBoard/Julieta': 'arduino:avr:uno',
                        'Nano 328': 'arduino:avr:nano:cpu=atmega328',
                        'Nano 168': 'arduino:avr:nano:cpu=atmega168',
                        'Leonardo': 'arduino:avr:leonardo',

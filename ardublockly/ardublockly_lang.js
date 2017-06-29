@@ -4,6 +4,11 @@
  *
  * @fileoverview Functions related to language and localisation.
  */
+
+ // Changes made by RoboCore
+ // 28/06/2017 - by @marcelofariaz:
+ //  - Some languages are supressed;
+
 'use strict';
 
 /** Create a namespace for the application. */
