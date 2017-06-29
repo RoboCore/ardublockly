@@ -231,7 +231,7 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="spi_transfer"></block>' +
 '    <block type="spi_transfer_return"></block>' +
 '  </category>' +
-'  <category id="catRoboCore" name="RoboCore">' +
+'  <category id="catFalconRobot" name="FalconRobot">' +
 '    <block type="motor_config">' +
 '      <field name="MOTOR_DIRECTION_PIN">7</field>' +
 '      <field name="MOTOR_SPEED_PIN">5</field>' +
