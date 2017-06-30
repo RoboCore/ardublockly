@@ -1,12 +1,27 @@
 /**
  * @license Licensed under the Apache License, Version 2.0 (the "License"):
  *          http://www.apache.org/licenses/LICENSE-2.0
- *
+ */
+
+/**
  * @fileoverview CSS file for the Ardublockly application.
  *
  * There are a lot of '!important' tags in this file as a lot of the rules set
  * here go against the css rules from the Materialize framework.
  */
+
+ /**
+  * Changes made by RoboCore
+  * 30/06/2017 - by @lukemorales:
+  * - Swaped Ardublockly for RoboBlock;
+  * - Changed overall color theme;
+  * - Added accent color animations to Arduino Code and XML sections when selected;
+  * - Fixed sketch_name min-width that was cutting initial parameter;
+  * - Changed side-nav image;
+  * - Changed favicon;
+  * - Added a css rule for 'based on Ardublockly' label bellow the Ardublockly title;
+  */
+
 /******************/
 /*  Font sources  */
 /******************/
@@ -14,7 +29,6 @@
   font-family: "Droid Sans Mono";
   src: url("font/droid/DroidSansMono.ttf") format("truetype");
 }
-
 
 /**********/
 /*  HTML  */
@@ -27,7 +41,8 @@ body {
 }
 
 body {
-  background-color: #eeeeee;
+  /*background-color: #071108;*/
+  background: url(img/body_bg_gs.jpg) repeat left top;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
@@ -40,17 +55,16 @@ body {
 /*  Arduino Colours  */
 /*********************/
 .arduino_teal {
-  background-color: #00979C;
+  background-color: #292929;
 }
 .arduino_teal_dark {
-  background-color: #006468;
-  /* background-color: #00878F; from community logo */
+  background-color: #232323;
 }
 .arduino_teal_light {
-  background-color: #62AEB2;
+  background-color: #3d3d3d;
 }
 .arduino_orange {
-  background-color: #E47128;
+  background-color: #FCCF00;
 }
 .arduino_yellow {
   background-color: rgba(255, 204, 51, 1);
@@ -115,6 +129,7 @@ ul.side-nav li.side-menu-end {
   padding: 0;
   width: 100%;
   background-color: #ffffff;
+  color: #232323;
 }
 .height_transition {
   transition: height 0.2s ease-out;
@@ -158,8 +173,10 @@ ul.side-nav li.side-menu-end {
   font-family: monospace;
   font-size: smaller;
   overflow: scroll;
-  font-style: 0.2em !important;
+  /*font-size: 0.2em !important;*/
   min-height: 384px;
+  background-color: #21211d;
+  color: white;
 }
 .content_xml_large {
   height: -moz-calc(100vh - 286px);     /* Firefox  */
@@ -190,6 +207,7 @@ ul.side-nav li.side-menu-end {
   -ms-user-select: text;
   user-select: text;
   min-height: 388px;
+  background-color: #21211d;
 }
 .content_arduino_large {
   height: -moz-calc(100vh - 280px);     /* Firefox  */
@@ -222,7 +240,7 @@ ul.side-nav li.side-menu-end {
   border-right: 0;
 }
 .ide_output_header_normal {
-  background-color: #006468;
+  background-color: #E2BA00;
   color: #ffffff;
   -moz-transition: background-color 0.6s ease-in;;
   -o-transition: background-color 0.6s ease-in;
@@ -321,6 +339,7 @@ ul.side-nav li.side-menu-end {
   top: 0px;
   width: 55px;
   height: 55px;
+  background-color: #FCCF00;
 }
 #button_ide_large i {
   font-size: 2.4rem !important;
@@ -336,6 +355,7 @@ ul.side-nav li.side-menu-end {
   -webkit-transition: visibility 0.3s linear, opacity 0.3s linear;
   -o-transition: visibility 0.3s linear, opacity 0.3s linear;
   transition: visibility 0.3s linear, opacity 0.3s linear;
+  background-color: #E2BA00;
 }
 #button_ide_left {
   position: absolute;
@@ -347,6 +367,7 @@ ul.side-nav li.side-menu-end {
   -webkit-transition: visibility 0.3s linear, opacity 0.3s linear;
   -o-transition: visibility 0.3s linear, opacity 0.3s linear;
   transition: visibility 0.3s linear, opacity 0.3s linear;
+  background-color: #3d3d3d;
 }
 #button_ide_large:hover:before,
 #button_ide_middle:hover:before,
@@ -370,6 +391,7 @@ ul.side-nav li.side-menu-end {
 }
 #button_load_xml .mdi-action-extension {
   font-size: 2.1rem !important;
+  color: #fccf00;
 }
 
 /* These floating buttons needs to be at a higher z index than card when */
@@ -406,10 +428,10 @@ ul.side-nav li.side-menu-end {
   -webkit-border-radius: 4px 4px 4px 4px !important;
   -moz-border-radius: 4px 4px 4px 4px !important;
   border-radius: 4px 4px 4px 4px !important;
-  background: rgba(98, 174, 178, .2) !important;  /* Arduino Light Teal */
+  background: #fccf00 !important;  /* Arduino Light Teal */
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); 
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   transition: background 0.3s linear, box-shadow 0.3s linear, border-width 0.3s linear;
   -ms-transition: background 0.3s linear, box-shadow 0.3s linear, border-width 0.3s linear;
   -moz-transition: background 0.3s linear, -moz-box-shadow 0.3s linear, border-width 0.3s linear;
@@ -424,6 +446,7 @@ ul.side-nav li.side-menu-end {
   text-align: center;
   font-size: 1.5rem !important;
   z-index: 5;
+  color: rgba(255,255,255,.3) !important;
 }
 
 
@@ -435,7 +458,7 @@ ul.side-nav li.side-menu-end {
   right: 0px !important;
   top: 0px !important;
   width: 55px !important;
-  height: 55px !important; 
+  height: 55px !important;
   z-index: 5;
 }
 .spinner-orange {
@@ -573,6 +596,7 @@ ul.side-nav li.side-menu-end {
 .sketch_name {
   width: auto !important;
   max-width: 400px;
+  min-width: 150px;
   line-height: 64px;
   height: 3rem !important;
   font-size: 1.5rem !important;
@@ -583,9 +607,23 @@ ul.side-nav li.side-menu-end {
     border-bottom: 1px solid #EEE !important;
 }
 
+/* Add 'powered by RoboCore' label bellow the Ardublockly title */
+.powered{
+  width: auto !important;
+  max-width: 160px;
+  /*height: 3rem !important;*/
+  font-size: 0.72rem !important;
+  display: inline-block;
+  margin-top: 20px;
+  position: absolute;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 600px) {
   .sketch_name {
     max-width: 200px;
+  }
+  .powered{
+    display: none;
   }
   /* Remove the "Ardublockly title only leaving the sketch name */
   .app_title {
@@ -594,12 +632,22 @@ ul.side-nav li.side-menu-end {
 }
 @media only screen and (min-width : 600px) {
   .sketch_name {
-    max-width: 275px;
+    max-width: 300px;
+  }
+
+  .powered{
+    left: 50%;
+    transform: translateX(-120%);
   }
 }
 @media only screen and (min-width : 993px) {
   .sketch_name {
     max-width: 350px;
+  }
+
+  .powered{
+    left: auto;
+    transform: translateX(0);
   }
 }
 
@@ -621,7 +669,7 @@ ul.side-nav li.side-menu-end {
 
 /* Colours for the new and deleted code highlighting */
 .code_highlight_new {
-  background-color: rgba(255, 204, 51, 0.5); /* Arduino yellow 50% */
+  background-color: rgba(28, 137, 204, 0.2);
 }
 .code_highlight_deleted {
   background-color: #FDBEBE;
@@ -647,13 +695,14 @@ ul.side-nav li.side-menu-end {
 .blocklyToolboxDiv {
   border-color: #e0e0e0 !important;
   border-width: 0px 1px 0px 0px !important;
-  -webkit-border-radius: 0px 4px 4px 0px !important;
+  /*-webkit-border-radius: 0px 4px 4px 0px !important;
   -moz-border-radius: 4px 4px 0px 0px !important;
-  border-radius: 0px 4px 4px 0px !important;
+  border-radius: 0px 4px 4px 0px !important;*/
   border: none !important;
   margin: 0px !important;
   padding: 0px 0px 0px 0px !important;
-  background: rgba(98, 174, 178, .2) !important;  /* Arduino Light Teal */
+  background: #21211d !important;
+  color: white !important;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -675,34 +724,37 @@ ul.side-nav li.side-menu-end {
   background: none !important;
   border: none !important;
   margin: 0px 0px !important;
-  padding: 7px 16px 7px 0px !important;
+  padding: 12px 16px 12px 0px !important;
   box-sizing: content-box !important;
+  transition: all ease-in-out .25s
 }
 .blocklyTreeSelected {
-  background-color: #E47128 !important;  /* arduino orange */
+  background-color: #E2BA00 !important;  /* yellow shade */
 }
 .blocklyTreeRow:not(.blocklyTreeSelected):hover {
-  background-color: rgba(255, 204, 51, 1) !important;  /* arduino yellow */
+  background-color: rgba(255, 255, 255, .07) !important;
+  color: #fccf00 !important;
+  transform: scale(1.05);
+  box-shadow: 0px 10px 10px -10px rgba(0,0,0,.6);
 }
 .blocklyTreeLabel {
 }
 .blocklyTreeSeparator{
   padding: 0px !important;
   margin: 0px !important;
+  border:none !important;
 }
 
 /* Toolbox second column with blocks*/
 .blocklyFlyoutBackground {
-  fill: #DEEEEF !important;
-  fill-opacity: 0.7 !important;
-  -webkit-border-radius: 0px 4px 4px 0px !important;
-  -moz-border-radius: 0px 4px 4px 0px !important;
-  border-radius: 0px 4px 4px 0px !important;
+  fill: #e8e8e4 !important;
+  fill-opacity: 0.9 !important;
+  border-radius: 0 !important;
 }
 
 /* Blockly scrollbars */
 .blocklyScrollbarKnob {
-  fill: #00878F !important;
+  fill: #E2BA00 !important;
   fill-opacity: 0.7 !important;
 }
 .blocklyScrollbarBackground {
