@@ -10,27 +10,27 @@
 }
 
 .pln {
-  color: #4d4d4c;
+  color: #ffffff;
 }
 
 @media screen {
   .str {
-    color: #718c00;
+    color: #a7e44f;
   }
   .kwd {
-    color: #5E6D03;
+    color: #fccf00;
   }
   .com {
-    color: #8e908c;
+    color: rgba(255,255,255,.6);
   }
   .typ {
-    color: #00979C;
+    color: #74ebab;
   }
   .lit {
-    color: #f5871f;
+    color: #f35151;
   }
   .pun {
-    color: #4d4d4c;
+    color: rgba(255,255,255,0.8);
   }
   .opn {
     color: #4d4d4c;
@@ -57,7 +57,7 @@
     color: #4271ae;
   }
 }
-@media print, projection {
+/* @media print, projection {
   .str {
     color: #006600;
   }
@@ -89,7 +89,7 @@
   .atv {
     color: #006600;
   }
-}
+} */
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums {
   margin-top: 0;
