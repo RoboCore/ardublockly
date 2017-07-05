@@ -230,7 +230,107 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="spi_setup"></block>' +
 '    <block type="spi_transfer"></block>' +
 '    <block type="spi_transfer_return"></block>' +
-'  </category>' +
+'    </category>' +
+
 '  <category id="catFalconRobot" name="FalconRobot">' +
+
+'    <category id="catFRMotors" name="FRMotors">' +
+'      <block type="fr_motors_config">' +
+'        <field name="FR_MOTORS_SPEED_PIN_1">5</field>' +
+'        <field name="FR_MOTORS_SPEED_PIN_2">6</field>' +
+'        <field name="FR_MOTORS_DIRECTION_PIN_1">7</field>' +
+'        <field name="FR_MOTORS_DIRECTION_PIN_2">8</field>' +
+'      </block>' +
+
+'      <block type="fr_motors_stop"></block>' +
+'      <block type="fr_motors_stop_left"></block>' +
+'      <block type="fr_motors_stop_right"></block>' +
+
+'      <block type="fr_motors_drive">' +
+'        <value name="FR_MOTORS_SPEED">' +
+'          <block type="math_number">' +
+'            <field name="NUM">100</field>' +
+'          </block>' +
+'        </value>' +
+'      </block>' +
+
+'      <block type="fr_motors_drive_delay">' +
+'        <value name="FR_MOTORS_SPEED">' +
+'          <block type="math_number">' +
+'            <field name="NUM">100</field>' +
+'          </block>' +
+'        </value>' +
+'        <value name="FR_MOTORS_DELAY">' +
+'          <block type="math_number">' +
+'            <field name="NUM">1000</field>' +
+'          </block>' +
+'        </value>' +
+'      </block>' +
+
+'      <block type="fr_motors_pivot">' +
+'        <value name="FR_MOTORS_SPEED">' +
+'          <block type="math_number">' +
+'            <field name="NUM">100</field>' +
+'          </block>' +
+'        </value>' +
+'      </block>' +
+
+'      <block type="fr_motors_pivot_delay">' +
+'        <value name="FR_MOTORS_SPEED">' +
+'          <block type="math_number">' +
+'            <field name="NUM">100</field>' +
+'          </block>' +
+'        </value>' +
+'        <value name="FR_MOTORS_DELAY">' +
+'          <block type="math_number">' +
+'            <field name="NUM">1000</field>' +
+'          </block>' +
+'        </value>' +
+'      </block>' +
+
+'      <block type="fr_motors_drive_left">' +
+'        <value name="FR_MOTORS_SPEED">' +
+'          <block type="math_number">' +
+'            <field name="NUM">100</field>' +
+'          </block>' +
+'        </value>' +
+'      </block>' +
+
+'      <block type="fr_motors_drive_left_delay">' +
+'        <value name="FR_MOTORS_SPEED">' +
+'          <block type="math_number">' +
+'            <field name="NUM">100</field>' +
+'          </block>' +
+'        </value>' +
+'        <value name="FR_MOTORS_DELAY">' +
+'          <block type="math_number">' +
+'            <field name="NUM">1000</field>' +
+'          </block>' +
+'        </value>' +
+'      </block>' +
+
+'      <block type="fr_motors_drive_right">' +
+'        <value name="FR_MOTORS_SPEED">' +
+'          <block type="math_number">' +
+'            <field name="NUM">100</field>' +
+'          </block>' +
+'        </value>' +
+'      </block>' +
+
+'      <block type="fr_motors_drive_right_delay">' +
+'        <value name="FR_MOTORS_SPEED">' +
+'          <block type="math_number">' +
+'            <field name="NUM">100</field>' +
+'          </block>' +
+'        </value>' +
+'        <value name="FR_MOTORS_DELAY">' +
+'          <block type="math_number">' +
+'            <field name="NUM">1000</field>' +
+'          </block>' +
+'        </value>' +
+'      </block>' +
+'    </category>' +
+
 '  </category>' +
+
 '</xml>';

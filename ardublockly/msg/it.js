@@ -93,5 +93,6 @@ Ardublockly.LOCALISED_TEXT = {
   catAudio: "Audio",
   catMotors: "Motori",
   catComms: "Comunicazione",
-  catFalconRobot: "Falcon Robot"
+  catFalconRobot: "Falcon Robot",
+  catFRMotors: "Motors"
 };
