@@ -233,8 +233,8 @@ Ardublockly.TOOLBOX_XML =
 '    </category>' +
 
 '  <category id="catFalconRobot" name="FalconRobot">' +
-
 '    <category id="catFRMotors" name="FRMotors">' +
+
 '      <block type="fr_motors_config">' +
 '        <field name="FR_MOTORS_SPEED_PIN_1">5</field>' +
 '        <field name="FR_MOTORS_SPEED_PIN_2">6</field>' +
@@ -329,8 +329,35 @@ Ardublockly.TOOLBOX_XML =
 '          </block>' +
 '        </value>' +
 '      </block>' +
+
+'    </category>' +
+
+'    <category id="catFRSensors" name="FRSensors">' +
+
+'      <block type="fr_button_0_config">' +
+'        <field name="FR_BUTTON_0_PIN">A0</field>' +
+'      </block>' +
+
+'      <block type="fr_button_1_config">' +
+'        <field name="FR_BUTTON_1_PIN">A1</field>' +
+'      </block>' +
+
+'      <block type="fr_button_0_read"></block>' +
+
+'      <block type="fr_button_1_read"></block>' +
+
+'      <block type="fr_distance_sensor_config">' +
+'        <field name="FR_DISTANCE_SENSOR_ECHO_PIN">2</field>' +
+'        <field name="FR_DISTANCE_SENSOR_TRIGGER_PIN">3</field>' +
+'      </block>' +
+
+'      <block type="fr_distance_sensor_read_cm"></block>' +
+'      <block type="fr_distance_sensor_read_inch"></block>' +
+
 '    </category>' +
 
 '  </category>' +
+
+
 
 '</xml>';

@@ -14,7 +14,7 @@
 
 'use strict';
 
-goog.provide('Blockly.Arduino.falconrobot');
+goog.provide('Blockly.Arduino.fr_motors');
 
 goog.require('Blockly.Arduino');
 
@@ -23,9 +23,8 @@ goog.require('Blockly.Arduino');
  * Code generator for the motor generator configuration. Nothing is added
  * to the 'loop()' function. Sets the pins (X and Y), speed(A) and instance
  * name (B).
- * Arduino code: #include <Motor.h>
- *               Motor B(X, Y);
- *               setup() { B.setSpeed(A); }
+ * Arduino code: #include <FalconRobot.h>
+ *               FalconRobotMotors motors(X, Y);
  * @param {!Blockly.Block} block Block to generate the code from.
  * @return {string} Empty string as no code goes into 'loop()'.
  */
@@ -36,7 +35,6 @@ Blockly.Arduino['fr_motors_config'] = function(block) {
   var pinDirection2 = block.getFieldValue('FR_MOTORS_DIRECTION_PIN_2');
   var pinTypeSpeed = Blockly.Arduino.PinTypes.PWM;
   var pinTypeDirection = Blockly.Arduino.PinTypes.OUTPUT;
-  // var motorName = block.getFieldValue('FR_MOTOR_NAME');
 
   Blockly.Arduino.reservePin(block, pinSpeed1, pinTypeSpeed, Blockly.Msg.FR_MOTORS);
   Blockly.Arduino.reservePin(block, pinSpeed2, pinTypeSpeed, Blockly.Msg.FR_MOTORS);
@@ -45,7 +43,7 @@ Blockly.Arduino['fr_motors_config'] = function(block) {
 
   Blockly.Arduino.addInclude('FalconRobot', '#include <FalconRobot.h>');
 
-  var globalCode = 'FalconRobotMotors motors' +/* motorName +*/ '(' + pinSpeed1 + ', ' +
+  var globalCode = 'FalconRobotMotors motors' + '(' + pinSpeed1 + ', ' +
       pinDirection1 + ', ' + pinSpeed2 + ', ' + pinDirection2 + ');';
 
   Blockly.Arduino.addDeclaration(Blockly.Msg.FR_MOTORS, globalCode);
@@ -54,11 +52,10 @@ Blockly.Arduino['fr_motors_config'] = function(block) {
 };
 
 /**
- * Code generator for set the motor instance (X) to a number a speed (Y) at
- * a direction (Z).
+ * Code generator for stop the motors
  * Library info in the setHelpUrl link.
  * This block requires the motor_config block to be present.
- * Arduino code: loop { X.set(Y, Z) }
+ * Arduino code: loop { motors.stop() }
  * @param {!Blockly.Block} block Block to generate the code from.
  * @return {array} Completed code with order of operation.
  */
@@ -68,11 +65,10 @@ Blockly.Arduino['fr_motors_stop'] = function(block) {
 };
 
 /**
- * Code generator for set the motor instance (X) to a number a speed (Y) at
- * a direction (Z).
+ * Code generator for stop the left motor
  * Library info in the setHelpUrl link.
  * This block requires the motor_config block to be present.
- * Arduino code: loop { X.set(Y, Z) }
+ * Arduino code: loop { motors.leftStop() }
  * @param {!Blockly.Block} block Block to generate the code from.
  * @return {array} Completed code with order of operation.
  */
@@ -82,11 +78,10 @@ Blockly.Arduino['fr_motors_stop_left'] = function(block) {
 };
 
 /**
- * Code generator for set the motor instance (X) to a number a speed (Y) at
- * a direction (Z).
- * Library info in the setHelpUrl link.
- * This block requires the motor_config block to be present.
- * Arduino code: loop { X.set(Y, Z) }
+* Code generator for stop the right motor
+* Library info in the setHelpUrl link.
+* This block requires the motor_config block to be present.
+* Arduino code: loop { motors.rightStop() }
  * @param {!Blockly.Block} block Block to generate the code from.
  * @return {array} Completed code with order of operation.
  */
@@ -96,11 +91,11 @@ Blockly.Arduino['fr_motors_stop_right'] = function(block) {
 };
 
 /**
- * Code generator for set the motor instance (X) to a number a speed (Y) at
+ * Code generator for drive the motors  to a number a speed (Y) at
  * a direction (Z).
  * Library info in the setHelpUrl link.
  * This block requires the motor_config block to be present.
- * Arduino code: loop { X.set(Y, Z) }
+ * Arduino code: loop { motors.drive(Y, Z) }
  * @param {!Blockly.Block} block Block to generate the code from.
  * @return {array} Completed code with order of operation.
  */
@@ -113,11 +108,11 @@ Blockly.Arduino['fr_motors_drive'] = function(block) {
 };
 
 /**
- * Code generator for set the motor instance (X) to a number a speed (Y) at
- * a direction (Z).
- * Library info in the setHelpUrl link.
- * This block requires the motor_config block to be present.
- * Arduino code: loop { X.set(Y, Z) }
+* Code generator for drive the motors  to a number a speed (X) at
+* a direction (Y) per a period(Z).
+* Library info in the setHelpUrl link.
+* This block requires the motor_config block to be present.
+* Arduino code: loop { motors.drive(X, Y, Z) }
  * @param {!Blockly.Block} block Block to generate the code from.
  * @return {array} Completed code with order of operation.
  */
@@ -133,11 +128,11 @@ Blockly.Arduino['fr_motors_drive_delay'] = function(block) {
 };
 
 /**
- * Code generator for set the motor instance (X) to a number a speed (Y) at
- * a direction (Z).
- * Library info in the setHelpUrl link.
- * This block requires the motor_config block to be present.
- * Arduino code: loop { X.set(Y, Z) }
+* Code generator for pivot the motors  to a number a speed (X) at
+* a direction (Y).
+* Library info in the setHelpUrl link.
+* This block requires the motor_config block to be present.
+* Arduino code: loop { motors.pivot(X, Y) }
  * @param {!Blockly.Block} block Block to generate the code from.
  * @return {array} Completed code with order of operation.
  */
@@ -150,11 +145,11 @@ Blockly.Arduino['fr_motors_pivot'] = function(block) {
 };
 
 /**
- * Code generator for set the motor instance (X) to a number a speed (Y) at
- * a direction (Z).
- * Library info in the setHelpUrl link.
- * This block requires the motor_config block to be present.
- * Arduino code: loop { X.set(Y, Z) }
+* Code generator for pivot the motors  to a number a speed (X) at
+* a direction (Y) per a period(Z).
+* Library info in the setHelpUrl link.
+* This block requires the motor_config block to be present.
+* Arduino code: loop { motors.pivot(X, Y, Z) }
  * @param {!Blockly.Block} block Block to generate the code from.
  * @return {array} Completed code with order of operation.
  */
@@ -170,11 +165,11 @@ Blockly.Arduino['fr_motors_pivot_delay'] = function(block) {
 };
 
 /**
- * Code generator for set the motor instance (X) to a number a speed (Y) at
+ * Code generator for drive the left motor to a number a speed (Y) at
  * a direction (Z).
  * Library info in the setHelpUrl link.
  * This block requires the motor_config block to be present.
- * Arduino code: loop { X.set(Y, Z) }
+ * Arduino code: loop { motors.leftDrive(Y, Z) }
  * @param {!Blockly.Block} block Block to generate the code from.
  * @return {array} Completed code with order of operation.
  */
@@ -187,11 +182,11 @@ Blockly.Arduino['fr_motors_drive_left'] = function(block) {
 };
 
 /**
- * Code generator for set the motor instance (X) to a number a speed (Y) at
- * a direction (Z).
+ * Code generator for drive the left motor to a number a speed (X) at
+ * a direction (Y) per a period (Z).
  * Library info in the setHelpUrl link.
  * This block requires the motor_config block to be present.
- * Arduino code: loop { X.set(Y, Z) }
+ * Arduino code: loop { motors.leftDrive(X, Y, Z) }
  * @param {!Blockly.Block} block Block to generate the code from.
  * @return {array} Completed code with order of operation.
  */
@@ -207,11 +202,11 @@ Blockly.Arduino['fr_motors_drive_left_delay'] = function(block) {
 };
 
 /**
- * Code generator for set the motor instance (X) to a number a speed (Y) at
+ * Code generator for set the right motor to a number a speed (Y) at
  * a direction (Z).
  * Library info in the setHelpUrl link.
  * This block requires the motor_config block to be present.
- * Arduino code: loop { X.set(Y, Z) }
+ * Arduino code: loop { rightDrive.rightDrive(Y, Z) }
  * @param {!Blockly.Block} block Block to generate the code from.
  * @return {array} Completed code with order of operation.
  */
@@ -224,11 +219,11 @@ Blockly.Arduino['fr_motors_drive_right'] = function(block) {
 };
 
 /**
- * Code generator for set the motor instance (X) to a number a speed (Y) at
- * a direction (Z).
+ * Code generator for set the right motor to a number a speed (X) at
+ * a direction (Y) per a period(Z).
  * Library info in the setHelpUrl link.
  * This block requires the motor_config block to be present.
- * Arduino code: loop { X.set(Y, Z) }
+ * Arduino code: loop { rightDrive.drive(X, Y, Z) }
  * @param {!Blockly.Block} block Block to generate the code from.
  * @return {array} Completed code with order of operation.
  */

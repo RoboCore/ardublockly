@@ -183,6 +183,27 @@ Blockly.Msg.ENABLE_BLOCK = "Activar lo blòt";
 Blockly.Msg.EXPAND_ALL = "Desvolopar los blòts";
 Blockly.Msg.EXPAND_BLOCK = "Desvolopar lo blòt";
 Blockly.Msg.EXTERNAL_INPUTS = "Entradas extèrnas";
+Blockly.Msg.FR_BUTTON_0 = "FalconButton0";  // untranslated
+Blockly.Msg.FR_BUTTON_0_PIN = "pin:";  // untranslated
+Blockly.Msg.FR_BUTTON_0_READ = "Read Button0";  // untranslated
+Blockly.Msg.FR_BUTTON_0_READ_TIP = "Read the state of Button0 (0 = Realeased; 1 = Pressed).";  // untranslated
+Blockly.Msg.FR_BUTTON_0_SETUP = "Setup Button0:";  // untranslated
+Blockly.Msg.FR_BUTTON_0_SETUP_TIP = "Configures the button 0 pin.";  // untranslated
+Blockly.Msg.FR_BUTTON_1 = "FalconButton1";  // untranslated
+Blockly.Msg.FR_BUTTON_1_PIN = "pin:";  // untranslated
+Blockly.Msg.FR_BUTTON_1_READ = "Read Button1";  // untranslated
+Blockly.Msg.FR_BUTTON_1_READ_TIP = "Read the state of Button1 (0 = Realeased; 1 = Pressed).";  // untranslated
+Blockly.Msg.FR_BUTTON_1_SETUP = "Setup Button1:";  // untranslated
+Blockly.Msg.FR_BUTTON_1_SETUP_TIP = "Configures the button 1 pin.";  // untranslated
+Blockly.Msg.FR_DISTANCE_SENSOR = "Distance Sensor";  // untranslated
+Blockly.Msg.FR_DISTANCE_SENSOR_ECHO_PIN = "echo pin:";  // untranslated
+Blockly.Msg.FR_DISTANCE_SENSOR_READ_CM = "Read Distance (CM)";  // untranslated
+Blockly.Msg.FR_DISTANCE_SENSOR_READ_CM_TIP = "Reads the distance in CM.";  // untranslated
+Blockly.Msg.FR_DISTANCE_SENSOR_READ_INCH = "Read Distance (INCH)";  // untranslated
+Blockly.Msg.FR_DISTANCE_SENSOR_READ_INCH_TIP = "Reads the distance in INCH.";  // untranslated
+Blockly.Msg.FR_DISTANCE_SENSOR_SETUP = "Setup Distance Sensor";  // untranslated
+Blockly.Msg.FR_DISTANCE_SENSOR_SETUP_TIP = "Configures the Distance Sensor pinout.";  // untranslated
+Blockly.Msg.FR_DISTANCE_SENSOR_TRIGGER_PIN = "trigger pin:";  // untranslated
 Blockly.Msg.FR_MOTORS = "FalconMotors";  // untranslated
 Blockly.Msg.FR_MOTORS_DEFAULT_NAME = "motors";  // untranslated
 Blockly.Msg.FR_MOTORS_DIRECTION_BACKWARD = "BACKWARD";  // untranslated
