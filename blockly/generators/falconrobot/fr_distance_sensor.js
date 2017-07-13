@@ -16,6 +16,7 @@
  * @return {string} Empty string as no code goes into 'loop()'.
  */
 Blockly.Arduino['fr_distance_sensor_config'] = function(block) {
+  var name = block.getFieldValue('FR_DISTANCE_SENSOR_NAME');
   var pinTrigger = block.getFieldValue('FR_DISTANCE_SENSOR_TRIGGER_PIN');
   var pinEcho = block.getFieldValue('FR_DISTANCE_SENSOR_ECHO_PIN');
   var pinType = Blockly.Arduino.PinTypes.digitalPins;
@@ -25,9 +26,9 @@ Blockly.Arduino['fr_distance_sensor_config'] = function(block) {
 
   Blockly.Arduino.addInclude('FalconRobot', '#include <FalconRobot.h>');
 
-  var globalCode = 'FalconRobotDistanceSensor distanceSensor' + '(' +
+  var globalCode = 'FalconRobotDistanceSensor ' + name + '(' +
                     pinTrigger + ', ' + pinEcho + ');';
-  Blockly.Arduino.addDeclaration(Blockly.Msg.FR_DISTANCE_SENSOR, globalCode);
+  Blockly.Arduino.addDeclaration(name, globalCode);
 
   return '';
 };
@@ -41,7 +42,8 @@ Blockly.Arduino['fr_distance_sensor_config'] = function(block) {
  * @return {array} Completed code with order of operation.
  */
 Blockly.Arduino['fr_distance_sensor_read_cm'] = function(block) {
-  var code = 'distanceSensor.read(CM);';
+  var name = block.getFieldValue('FR_DISTANCE_SENSOR_NAME');
+  var code = name + '.read(CM)';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
@@ -54,6 +56,7 @@ Blockly.Arduino['fr_distance_sensor_read_cm'] = function(block) {
  * @return {array} Completed code with order of operation.
  */
 Blockly.Arduino['fr_distance_sensor_read_inch'] = function(block) {
-  var code = 'distanceSensor.read(INCH);';
+  var name = block.getFieldValue('FR_DISTANCE_SENSOR_NAME');
+  var code = name + '.read(INCH)';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };

@@ -24,20 +24,28 @@
 
 Blockly.Blocks['fr_distance_sensor_config'] = {
   /**
-   * Block for the ultrasonic generator configuration.
+   * Block for the distance sensor generator configuration.
    * @this Blockly.Block
    */
   init: function() {
     this.setHelpUrl('http://arduino.cc/en/Reference/');
     this.setColour(Blockly.Blocks.fr_distance_sensor.HUE);
+    // this.appendDummyInput()
+    //     .appendField(new Blockly.FieldLabel(Blockly.Msg.FR_DISTANCE_SENSOR_SETUP));
+
     this.appendDummyInput()
-        .appendField(new Blockly.FieldLabel(Blockly.Msg.FR_DISTANCE_SENSOR_SETUP));
+        .appendField(Blockly.Msg.FR_DISTANCE_SENSOR_SETUP)
+        .appendField(
+            new Blockly.FieldInstance('FR_DISTANCE_SENSOR',
+                                      Blockly.Msg.FR_DISTANCE_SENSOR_DEFAULT_NAME,
+                                      true, true, false),
+            'FR_DISTANCE_SENSOR_NAME');
 
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.FR_DISTANCE_SENSOR_ECHO_PIN)
         .appendField(new Blockly.FieldDropdown(
-            Blockly.Arduino.Boards.selected.digitalPins), 'FR_DISTANCE_SENSOR_ECHO_PIN')
+            Blockly.Arduino.Boards.selected.digitalPins), 'FR_DISTANCE_SENSOR_ECHO_PIN');
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.FR_DISTANCE_SENSOR_TRIGGER_PIN)
@@ -63,16 +71,43 @@ Blockly.Blocks['fr_distance_sensor_read_cm'] = {
    * @this Blockly.Block
    */
   init: function() {
-      this.setHelpUrl('http://arduino.cc/en/Reference/');
-      this.setColour(Blockly.Blocks.fr_distance_sensor.HUE);
-      this.appendDummyInput()
-          .appendField(new Blockly.FieldLabel(Blockly.Msg.FR_DISTANCE_SENSOR_READ_CM));
+    this.setHelpUrl('http://arduino.cc/en/Reference/');
+    this.setColour(Blockly.Blocks.fr_distance_sensor.HUE);
+    // this.appendDummyInput()
+    //     .appendField(new Blockly.FieldLabel(Blockly.Msg.FR_DISTANCE_SENSOR_READ_CM));
+
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.FR_DISTANCE_SENSOR_READ_CM)
+        .appendField(
+            new Blockly.FieldInstance('FR_DISTANCE_SENSOR',
+                                      Blockly.Msg.FR_DISTANCE_SENSOR_DEFAULT_NAME,
+                                      false, true, false),
+            'FR_DISTANCE_SENSOR_NAME');
 
     this.setInputsInline(true);
     this.setPreviousStatement(false);
     this.setOutput(true);
     this.setNextStatement(false);
     this.setTooltip(Blockly.Msg.FR_DISTANCE_SENSOR_READ_CM_TIP);
+  },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected distance sensor instance has a config block.
+   * @this Blockly.Block
+   */
+  onchange: function() {
+    if (!this.workspace) return;  // Block has been deleted.
+
+    var instanceName = this.getFieldValue('FR_DISTANCE_SENSOR_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'FR_DISTANCE_SENSOR', this)) {
+      this.setWarningText(null);
+    } else {
+      // Set a warning to select a valid distance sensor config block
+      this.setWarningText(
+        Blockly.Msg.ARD_COMPONENT_WARN1.replace(
+            '%1', Blockly.Msg.FR_DISTANCE_SENSOR).replace(
+                '%2', instanceName));
+    }
   }
 };
 
@@ -82,15 +117,42 @@ Blockly.Blocks['fr_distance_sensor_read_inch'] = {
    * @this Blockly.Block
    */
   init: function() {
-      this.setHelpUrl('http://arduino.cc/en/Reference/');
-      this.setColour(Blockly.Blocks.fr_distance_sensor.HUE);
-      this.appendDummyInput()
-          .appendField(new Blockly.FieldLabel(Blockly.Msg.FR_DISTANCE_SENSOR_READ_INCH));
+    this.setHelpUrl('http://arduino.cc/en/Reference/');
+    this.setColour(Blockly.Blocks.fr_distance_sensor.HUE);
+    // this.appendDummyInput()
+    //     .appendField(new Blockly.FieldLabel(Blockly.Msg.FR_DISTANCE_SENSOR_READ_INCH));
+
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.FR_DISTANCE_SENSOR_READ_INCH)
+        .appendField(
+            new Blockly.FieldInstance('FR_DISTANCE_SENSOR',
+                                      Blockly.Msg.FR_DISTANCE_SENSOR_DEFAULT_NAME,
+                                      false, true, false),
+                    'FR_DISTANCE_SENSOR_NAME');
 
     this.setInputsInline(true);
     this.setPreviousStatement(false);
     this.setOutput(true);
     this.setNextStatement(false);
     this.setTooltip(Blockly.Msg.FR_DISTANCE_SENSOR_READ_INCH_TIP);
+  },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks/warns if the selected distance sensor instance has a config block.
+   * @this Blockly.Block
+   */
+  onchange: function() {
+    if (!this.workspace) return;  // Block has been deleted.
+
+    var instanceName = this.getFieldValue('FR_DISTANCE_SENSOR_NAME')
+    if (Blockly.Instances.isInstancePresent(instanceName, 'FR_DISTANCE_SENSOR', this)) {
+      this.setWarningText(null);
+    } else {
+      // Set a warning to select a valid distance sensor config block
+      this.setWarningText(
+        Blockly.Msg.ARD_COMPONENT_WARN1.replace(
+            '%1', Blockly.Msg.FR_DISTANCE_SENSOR).replace(
+                '%2', instanceName));
+    }
   }
 };

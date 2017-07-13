@@ -231,21 +231,17 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="spi_transfer"></block>' +
 '    <block type="spi_transfer_return"></block>' +
 '    </category>' +
-
 '  <category id="catFalconRobot" name="FalconRobot">' +
 '    <category id="catFRMotors" name="FRMotors">' +
-
 '      <block type="fr_motors_config">' +
 '        <field name="FR_MOTORS_SPEED_PIN_1">5</field>' +
 '        <field name="FR_MOTORS_SPEED_PIN_2">6</field>' +
 '        <field name="FR_MOTORS_DIRECTION_PIN_1">7</field>' +
 '        <field name="FR_MOTORS_DIRECTION_PIN_2">8</field>' +
 '      </block>' +
-
 '      <block type="fr_motors_stop"></block>' +
 '      <block type="fr_motors_stop_left"></block>' +
 '      <block type="fr_motors_stop_right"></block>' +
-
 '      <block type="fr_motors_drive">' +
 '        <value name="FR_MOTORS_SPEED">' +
 '          <block type="math_number">' +
@@ -253,7 +249,6 @@ Ardublockly.TOOLBOX_XML =
 '          </block>' +
 '        </value>' +
 '      </block>' +
-
 '      <block type="fr_motors_drive_delay">' +
 '        <value name="FR_MOTORS_SPEED">' +
 '          <block type="math_number">' +
@@ -266,7 +261,6 @@ Ardublockly.TOOLBOX_XML =
 '          </block>' +
 '        </value>' +
 '      </block>' +
-
 '      <block type="fr_motors_pivot">' +
 '        <value name="FR_MOTORS_SPEED">' +
 '          <block type="math_number">' +
@@ -274,7 +268,6 @@ Ardublockly.TOOLBOX_XML =
 '          </block>' +
 '        </value>' +
 '      </block>' +
-
 '      <block type="fr_motors_pivot_delay">' +
 '        <value name="FR_MOTORS_SPEED">' +
 '          <block type="math_number">' +
@@ -287,7 +280,6 @@ Ardublockly.TOOLBOX_XML =
 '          </block>' +
 '        </value>' +
 '      </block>' +
-
 '      <block type="fr_motors_drive_left">' +
 '        <value name="FR_MOTORS_SPEED">' +
 '          <block type="math_number">' +
@@ -295,7 +287,6 @@ Ardublockly.TOOLBOX_XML =
 '          </block>' +
 '        </value>' +
 '      </block>' +
-
 '      <block type="fr_motors_drive_left_delay">' +
 '        <value name="FR_MOTORS_SPEED">' +
 '          <block type="math_number">' +
@@ -308,7 +299,6 @@ Ardublockly.TOOLBOX_XML =
 '          </block>' +
 '        </value>' +
 '      </block>' +
-
 '      <block type="fr_motors_drive_right">' +
 '        <value name="FR_MOTORS_SPEED">' +
 '          <block type="math_number">' +
@@ -316,7 +306,6 @@ Ardublockly.TOOLBOX_XML =
 '          </block>' +
 '        </value>' +
 '      </block>' +
-
 '      <block type="fr_motors_drive_right_delay">' +
 '        <value name="FR_MOTORS_SPEED">' +
 '          <block type="math_number">' +
@@ -329,35 +318,26 @@ Ardublockly.TOOLBOX_XML =
 '          </block>' +
 '        </value>' +
 '      </block>' +
-
 '    </category>' +
-
 '    <category id="catFRSensors" name="FRSensors">' +
-
-'      <block type="fr_button_0_config">' +
-'        <field name="FR_BUTTON_0_PIN">A0</field>' +
-'      </block>' +
-
-'      <block type="fr_button_1_config">' +
-'        <field name="FR_BUTTON_1_PIN">A1</field>' +
-'      </block>' +
-
-'      <block type="fr_button_0_read"></block>' +
-
-'      <block type="fr_button_1_read"></block>' +
-
 '      <block type="fr_distance_sensor_config">' +
 '        <field name="FR_DISTANCE_SENSOR_ECHO_PIN">2</field>' +
 '        <field name="FR_DISTANCE_SENSOR_TRIGGER_PIN">3</field>' +
 '      </block>' +
-
 '      <block type="fr_distance_sensor_read_cm"></block>' +
 '      <block type="fr_distance_sensor_read_inch"></block>' +
-
+'      <block type="fr_line_sensor_config">' +
+'        <field name="FR_LINE_SENSOR_PIN">A2</field>' +
+'      </block>' +
+'      <block type="fr_line_sensor_read"></block>' +
+'      <block type="fr_line_sensor_check"></block>' +
+'      <block type="fr_line_sensor_set_bg"></block>' +
+'      <block type="fr_line_sensor_set_detect"></block>' +
+'      <block type="fr_line_sensor_cal_status"></block>' +
+'      <block type="fr_button_config">' +
+'        <field name="FR_BUTTON_PIN">A0</field>' +
+'      </block>' +
+'      <block type="fr_button_read"></block>' +
 '    </category>' +
-
 '  </category>' +
-
-
-
 '</xml>';
