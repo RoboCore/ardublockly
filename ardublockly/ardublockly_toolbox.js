@@ -261,25 +261,25 @@ Ardublockly.TOOLBOX_XML =
 '          </block>' +
 '        </value>' +
 '      </block>' +
-'      <block type="fr_motors_pivot">' +
-'        <value name="FR_MOTORS_SPEED">' +
-'          <block type="math_number">' +
-'            <field name="NUM">100</field>' +
-'          </block>' +
-'        </value>' +
-'      </block>' +
-'      <block type="fr_motors_pivot_delay">' +
-'        <value name="FR_MOTORS_SPEED">' +
-'          <block type="math_number">' +
-'            <field name="NUM">100</field>' +
-'          </block>' +
-'        </value>' +
-'        <value name="FR_MOTORS_DELAY">' +
-'          <block type="math_number">' +
-'            <field name="NUM">1000</field>' +
-'          </block>' +
-'        </value>' +
-'      </block>' +
+// '      <block type="fr_motors_pivot">' +
+// '        <value name="FR_MOTORS_SPEED">' +
+// '          <block type="math_number">' +
+// '            <field name="NUM">100</field>' +
+// '          </block>' +
+// '        </value>' +
+// '      </block>' +
+// '      <block type="fr_motors_pivot_delay">' +
+// '        <value name="FR_MOTORS_SPEED">' +
+// '          <block type="math_number">' +
+// '            <field name="NUM">100</field>' +
+// '          </block>' +
+// '        </value>' +
+// '        <value name="FR_MOTORS_DELAY">' +
+// '          <block type="math_number">' +
+// '            <field name="NUM">1000</field>' +
+// '          </block>' +
+// '        </value>' +
+// '      </block>' +
 '      <block type="fr_motors_drive_left">' +
 '        <value name="FR_MOTORS_SPEED">' +
 '          <block type="math_number">' +
@@ -287,18 +287,18 @@ Ardublockly.TOOLBOX_XML =
 '          </block>' +
 '        </value>' +
 '      </block>' +
-'      <block type="fr_motors_drive_left_delay">' +
-'        <value name="FR_MOTORS_SPEED">' +
-'          <block type="math_number">' +
-'            <field name="NUM">100</field>' +
-'          </block>' +
-'        </value>' +
-'        <value name="FR_MOTORS_DELAY">' +
-'          <block type="math_number">' +
-'            <field name="NUM">1000</field>' +
-'          </block>' +
-'        </value>' +
-'      </block>' +
+// '      <block type="fr_motors_drive_left_delay">' +
+// '        <value name="FR_MOTORS_SPEED">' +
+// '          <block type="math_number">' +
+// '            <field name="NUM">100</field>' +
+// '          </block>' +
+// '        </value>' +
+// '        <value name="FR_MOTORS_DELAY">' +
+// '          <block type="math_number">' +
+// '            <field name="NUM">1000</field>' +
+// '          </block>' +
+// '        </value>' +
+// '      </block>' +
 '      <block type="fr_motors_drive_right">' +
 '        <value name="FR_MOTORS_SPEED">' +
 '          <block type="math_number">' +
@@ -306,18 +306,18 @@ Ardublockly.TOOLBOX_XML =
 '          </block>' +
 '        </value>' +
 '      </block>' +
-'      <block type="fr_motors_drive_right_delay">' +
-'        <value name="FR_MOTORS_SPEED">' +
-'          <block type="math_number">' +
-'            <field name="NUM">100</field>' +
-'          </block>' +
-'        </value>' +
-'        <value name="FR_MOTORS_DELAY">' +
-'          <block type="math_number">' +
-'            <field name="NUM">1000</field>' +
-'          </block>' +
-'        </value>' +
-'      </block>' +
+// '      <block type="fr_motors_drive_right_delay">' +
+// '        <value name="FR_MOTORS_SPEED">' +
+// '          <block type="math_number">' +
+// '            <field name="NUM">100</field>' +
+// '          </block>' +
+// '        </value>' +
+// '        <value name="FR_MOTORS_DELAY">' +
+// '          <block type="math_number">' +
+// '            <field name="NUM">1000</field>' +
+// '          </block>' +
+// '        </value>' +
+// '      </block>' +
 '    </category>' +
 '    <category id="catFRSensors" name="FRSensors">' +
 '      <block type="fr_distance_sensor_config">' +
