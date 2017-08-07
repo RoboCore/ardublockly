@@ -512,7 +512,7 @@
 	"FR_MOTORS_PIVOT_TIP": "Pivot motors with a direction(LEFT or RIGHT) and a speed(0 - 100%).",
 	"FR_MOTORS_PIVOT_DELAY": "duration(ms)",
 	"FR_MOTORS_PIVOT_DELAY_TIP": "Pivot motors with a direction(LEFT or RIGHT) and a speed(0 - 100%) per a Period(ms).",
-	"FR_MOTORS_STOP": "stop",
+	"FR_MOTORS_STOP": "stop motors",
 	"FR_MOTORS_STOP_TIP": "Stop the both motors.",
 	"FR_MOTORS_STOP_LEFT": "stop left motor",
 	"FR_MOTORS_STOP_LEFT_TIP": "Stop left motor.",
